@@ -36,7 +36,7 @@ jobs:
       - name: Verify
         run: pnpm run verify
 
-      # Prove the engine runs with no build step and no runtime dependencies.
+      # Prove the engine runs post-install with no build step.
       - name: Smoke test the CLI from a clean directory
         run: |
           set -e
@@ -45,4 +45,28 @@ jobs:
           node "$GITHUB_WORKSPACE/packages/cli/src/bin.ts" init
           node "$GITHUB_WORKSPACE/packages/cli/src/bin.ts" capture \
             --note "Met Ada at the dinner. Insight: sovereignty is the moat. I'll send the essay Friday." --save --json
+          node "$GITHUB_WORKSPACE/packages/cli/src/bin.ts" doctor
+
+  # Proves the README's headline promise: a fresh clone runs with NO install and
+  # NO build. Deliberately never runs `pnpm install` — bin.ts self-links the
+  # workspace. This is the regression guard for that path.
+  zero-install:
+    name: zero-install (fresh clone, no pnpm)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Run the CLI with no install and no build
+        run: |
+          set -e
+          test ! -d node_modules  # prove nothing is installed
+          WORK="$(mktemp -d)"
+          cd "$WORK"
+          node "$GITHUB_WORKSPACE/packages/cli/src/bin.ts" init
+          node "$GITHUB_WORKSPACE/packages/cli/src/bin.ts" capture \
+            --note "Met Ada. Insight: sovereignty is the moat. I'll send the essay Friday. Also met Grace." --save
+          node "$GITHUB_WORKSPACE/packages/cli/src/bin.ts" brief
           node "$GITHUB_WORKSPACE/packages/cli/src/bin.ts" doctor
