@@ -2,6 +2,8 @@
 
 > Agentic engineering makes it compound.
 
+![Architecture diagram dividing human responsibilities (judgment, presence, trust) from agentic amplification (memory, consistency, cycle frequency), joined by approval flows.](../assets/human-agent.webp)
+
 Humans create the forces. Agents keep the loop turning — reliably, cheaply, and
 more often than a human could sustain alone. This is the half of the system that
 runs on machines, and it has a hard boundary.

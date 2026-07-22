@@ -1,5 +1,7 @@
 # The four compounding loops
 
+![Systems diagram of four interlinked loops — Signal-to-Artifact, Room-to-Network, Relationship-to-Contribution, Learning-to-Evolution — compounding around a gravity core.](../assets/four-loops.webp)
+
 Gravity compounds because these loops feed each other. Each has a human core and
 an agentic accelerant, and each maps to concrete commands and entities in the
 engine.

@@ -1,6 +1,6 @@
 <!-- Hero visual — dropped in when the raster asset is generated. See assets/README.md for the prompt + provenance. -->
 <p align="center">
-  <img src="assets/hero.webp" alt="A single human standing within a luminous constellation of ideas, artifacts, conversations, and small circles of people — the Starlight Gravity Engine rendered as a field of light in obsidian, midnight blue, aurora cyan, and gold." width="100%" />
+  <img src="assets/hero.webp" alt="A human figure stands within a luminous constellation of ideas, artifacts, conversations and intimate circles — the Starlight Gravity field." width="100%" />
 </p>
 
 <h1 align="center">Starlight Gravity Engine</h1>
@@ -44,6 +44,10 @@ the relationships _and_ the rooms _and_ the opportunities, moving together — h
 no home. The Gravity Engine is that home.
 
 ## The five forces of human gravity
+
+<p align="center">
+  <img src="assets/five-forces.webp" alt="Infographic of the five forces — Direction, Signal, Contribution, Convening, Reliability — orbiting a human center." width="100%" />
+</p>
 
 > **Gravity = Direction × Signal × Contribution × Convening × Reliability**
 

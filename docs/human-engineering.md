@@ -2,6 +2,8 @@
 
 > Human engineering creates gravity.
 
+![Architecture diagram dividing human responsibilities (judgment, presence, trust) from agentic amplification (memory, consistency, cycle frequency), joined by approval flows.](../assets/human-agent.webp)
+
 The forces are human. No agent can generate them for you — it can only reduce the
 friction that keeps you from expressing what's already yours. This is the half of
 the system that runs on you.

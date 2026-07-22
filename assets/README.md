@@ -5,17 +5,23 @@ sophisticated, restrained — a field of light, not corporate stock. Palette:
 **obsidian**, **midnight blue**, **aurora cyan**, subtle **gold**. No flat SVG
 diagrams; these are rendered images.
 
-Each asset ships as optimized `.webp` (with a `.png` fallback where a README or
-social card needs it), plus descriptive alt text and provenance recorded in
-[`provenance.json`](provenance.json). Until an asset is generated, its slot is
-**pending** and the referencing page degrades gracefully (alt text shows).
+Each asset ships as an optimized `.webp` for web surfaces plus a full-resolution
+`.png` master, with descriptive alt text and provenance recorded in
+[`provenance.json`](provenance.json). All four slots below are shipped
+(generated with Higgsfield `nano_banana_2`, 2026-07-22). If an asset is ever
+missing, the referencing page degrades gracefully via its alt text.
+
+> **QC note:** `four-loops.webp` contains minor generative-text garbling — a
+> nonsense token (“pubifact”) in the Signal→Artifact loop and a few duplicated
+> center labels. The four loop titles and the other loops' steps are correct. It
+> is shipped with this flag; a clean regeneration is tracked as a follow-up.
 
 | Slot          | File               | Used in                                                    | Status     |
 | ------------- | ------------------ | ---------------------------------------------------------- | ---------- |
-| Hero          | `hero.webp`        | `README.md`                                                | ⏳ pending |
-| Five Forces   | `five-forces.webp` | `README.md`, `docs/metrics.md`                             | ⏳ pending |
-| Human × Agent | `human-agent.webp` | `docs/human-engineering.md`, `docs/agentic-engineering.md` | ⏳ pending |
-| Four Loops    | `four-loops.webp`  | `docs/four-loops.md`                                       | ⏳ pending |
+| Hero          | `hero.webp`        | `README.md`                                                | ✅ shipped |
+| Five Forces   | `five-forces.webp` | `README.md`, `docs/metrics.md`                             | ✅ shipped |
+| Human × Agent | `human-agent.webp` | `docs/human-engineering.md`, `docs/agentic-engineering.md` | ✅ shipped |
+| Four Loops    | `four-loops.webp`  | `docs/four-loops.md`                                       | ✅ shipped |
 
 ## Generation prompts + alt text
 

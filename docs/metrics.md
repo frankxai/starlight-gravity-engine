@@ -1,5 +1,7 @@
 # Metrics — how the gravity score is computed
 
+![Infographic of the five forces — Direction, Signal, Contribution, Convening, Reliability — orbiting a human center.](../assets/five-forces.webp)
+
 The score is not a black box. Every number comes from a transparent formula in
 `packages/core/src/gravity.ts`, computed from your own field. This document is
 the exact specification.
