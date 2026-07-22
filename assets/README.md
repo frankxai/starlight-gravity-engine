@@ -11,11 +11,6 @@ Each asset ships as an optimized `.webp` for web surfaces plus a full-resolution
 (generated with Higgsfield `nano_banana_2`, 2026-07-22). If an asset is ever
 missing, the referencing page degrades gracefully via its alt text.
 
-> **QC note:** `four-loops.webp` contains minor generative-text garbling — a
-> nonsense token (“pubifact”) in the Signal→Artifact loop and a few duplicated
-> center labels. The four loop titles and the other loops' steps are correct. It
-> is shipped with this flag; a clean regeneration is tracked as a follow-up.
-
 | Slot          | File               | Used in                                                    | Status     |
 | ------------- | ------------------ | ---------------------------------------------------------- | ---------- |
 | Hero          | `hero.webp`        | `README.md`                                                | ✅ shipped |

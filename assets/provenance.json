@@ -54,8 +54,8 @@
       "dimensions": "1376x768",
       "usedIn": ["docs/four-loops.md"],
       "alt": "Systems diagram of four interlinked loops — Signal-to-Artifact, Room-to-Network, Relationship-to-Contribution, Learning-to-Evolution — compounding around a gravity core.",
-      "promptSummary": "Four interlocking loops of light around a GRAVITY core, each a labeled cycle, compounding inward. Obsidian / midnight-blue / cyan / gold.",
-      "qc": "MINOR GARBLING — the four loop titles and the steps of loops 2-4 render correctly, but Loop 1 (Signal→Artifact) shows a garbled nonsense token 'pubifact' near 'response', and a few center labels ('continue', 'strengthen', 'observe') are duplicated/floating. Shipped with this flag; a regen is tracked as a follow-up.",
+      "promptSummary": "Concentric rings of light around a GRAVITY core — one ring per loop, each with a single large clean label. Minimal-text design. Obsidian / cyan / gold / blue / green.",
+      "qc": "clean (regenerated 2026-07-22, minimal-text design) — title, GRAVITY, and all four color-matched ring labels (SIGNAL → ARTIFACT, ROOM → NETWORK, RELATIONSHIP → CONTRIBUTION, LEARNING → EVOLUTION) render correctly. Replaces the earlier version that had a garbled token and duplicated labels.",
       "license": "© 2026 Frank Riemer, all rights reserved (project asset)"
     }
   ]
