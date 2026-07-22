@@ -27,6 +27,7 @@
     "verify": "pnpm run schemas:validate && pnpm run test && pnpm run typecheck && pnpm run lint && pnpm run build"
   },
   "devDependencies": {
+    "@types/node": "^22.20.1",
     "prettier": "3.4.2",
     "typescript": "5.7.3"
   }
