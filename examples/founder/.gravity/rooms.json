@@ -1,0 +1,37 @@
+[
+  {
+    "id": "room_localfirst",
+    "thesis": "A small room on local-first sovereignty for builders.",
+    "theme": "local-first",
+    "hostId": "me",
+    "invitees": ["p_ada", "p_grace", "p_kenji"],
+    "scheduledFor": "2026-07-12T18:00:00.000Z",
+    "status": "synthesized",
+    "synthesis": "Consensus: own the bytes, earn the trust, then compound. Three follow-ups scheduled.",
+    "provenance": {
+      "source": "room",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-12T19:00:00.000Z",
+      "dataClass": "private_context",
+      "approval": "proposed",
+      "publishable": false
+    }
+  },
+  {
+    "id": "room_investors",
+    "thesis": "Founders-only: what sovereign infrastructure investors actually underwrite.",
+    "theme": "sovereignty",
+    "hostId": "me",
+    "invitees": ["p_kenji"],
+    "scheduledFor": "2026-07-19T17:00:00.000Z",
+    "status": "hosted",
+    "provenance": {
+      "source": "room",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-19T19:00:00.000Z",
+      "dataClass": "private_context",
+      "approval": "proposed",
+      "publishable": false
+    }
+  }
+]

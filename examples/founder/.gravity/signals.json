@@ -1,0 +1,82 @@
+[
+  {
+    "id": "sig_1",
+    "content": "Sovereignty is the real moat for agentic systems: people will not build their life on rented memory.",
+    "themes": ["sovereignty", "agentic systems"],
+    "strength": "strong",
+    "score": 0.9,
+    "relatedPeople": [],
+    "provenance": {
+      "source": "field-note:2026-07-08",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-08T19:00:00.000Z",
+      "dataClass": "private_context",
+      "approval": "proposed",
+      "publishable": false
+    }
+  },
+  {
+    "id": "sig_2",
+    "content": "Local-first storage is the wedge — own the bytes and the trust follows.",
+    "themes": ["local-first"],
+    "strength": "strong",
+    "score": 0.8,
+    "relatedPeople": [],
+    "provenance": {
+      "source": "field-note:2026-07-10",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-10T19:00:00.000Z",
+      "dataClass": "private_context",
+      "approval": "proposed",
+      "publishable": false
+    }
+  },
+  {
+    "id": "sig_3",
+    "content": "Investors keep asking who the buyer is before what it does; lead with the person, not the tech.",
+    "themes": ["sovereignty"],
+    "strength": "notable",
+    "score": 0.6,
+    "relatedPeople": [],
+    "provenance": {
+      "source": "field-note:2026-07-14",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-14T19:00:00.000Z",
+      "dataClass": "private_context",
+      "approval": "proposed",
+      "publishable": false
+    }
+  },
+  {
+    "id": "sig_4",
+    "content": "The five forces framing lands with founders faster than any feature list.",
+    "themes": ["agentic systems"],
+    "strength": "notable",
+    "score": 0.55,
+    "relatedPeople": [],
+    "provenance": {
+      "source": "field-note:2026-07-17",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-17T19:00:00.000Z",
+      "dataClass": "private_context",
+      "approval": "proposed",
+      "publishable": false
+    }
+  },
+  {
+    "id": "sig_5",
+    "content": "A room beats a newsletter: the network keeps producing after everyone logs off.",
+    "themes": ["sovereignty"],
+    "strength": "notable",
+    "score": 0.5,
+    "relatedPeople": [],
+    "provenance": {
+      "source": "field-note:2026-07-20",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-20T19:00:00.000Z",
+      "dataClass": "private_context",
+      "approval": "proposed",
+      "publishable": false
+    }
+  }
+]

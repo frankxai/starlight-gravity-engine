@@ -1,0 +1,62 @@
+{
+  "$comment": "Provenance for every raster asset. Each ships as a full-resolution PNG master plus a pre-optimized WebP used on web surfaces.",
+  "generator": {
+    "tool": "Higgsfield",
+    "model": "nano_banana_2",
+    "generatedAt": "2026-07-22"
+  },
+  "assets": [
+    {
+      "file": "hero.webp",
+      "master": "hero.png",
+      "role": "readme-hero",
+      "status": "shipped",
+      "aspect": "21:9",
+      "dimensions": "1584x672",
+      "usedIn": ["README.md"],
+      "alt": "A human figure stands within a luminous constellation of ideas, artifacts, conversations and intimate circles — the Starlight Gravity field.",
+      "promptSummary": "A lone figure seen from behind within a 3D constellation of glowing nodes — documents, conversations, intimate circles — joined by luminous filaments. Obsidian, midnight blue, aurora cyan, gold. Cinematic, no text.",
+      "qc": "clean — no text labels (parchment nodes are texture only)",
+      "license": "© 2026 Frank Riemer, all rights reserved (project asset)"
+    },
+    {
+      "file": "five-forces.webp",
+      "master": "five-forces.png",
+      "role": "infographic-five-forces",
+      "status": "shipped",
+      "aspect": "16:9",
+      "dimensions": "1376x768",
+      "usedIn": ["README.md", "docs/metrics.md"],
+      "alt": "Infographic of the five forces — Direction, Signal, Contribution, Convening, Reliability — orbiting a human center.",
+      "promptSummary": "Five glowing forces orbiting a human core, labeled Direction/Signal/Contribution/Convening/Reliability, with the Gravity product formula. Obsidian / cyan / gold.",
+      "qc": "clean — all five labels and the formula render correctly",
+      "license": "© 2026 Frank Riemer, all rights reserved (project asset)"
+    },
+    {
+      "file": "human-agent.webp",
+      "master": "human-agent.png",
+      "role": "infographic-human-agent",
+      "status": "shipped",
+      "aspect": "16:9",
+      "dimensions": "1376x768",
+      "usedIn": ["docs/human-engineering.md", "docs/agentic-engineering.md"],
+      "alt": "Architecture diagram dividing human responsibilities (judgment, presence, trust) from agentic amplification (memory, consistency, cycle frequency), joined by approval flows.",
+      "promptSummary": "Human side in gold (judgment, presence, generosity, relationship intent, identity, trust) and agent side in cyan (memory, consistency, preparation, transformation, cycle frequency), joined at 'HUMANS APPROVE / AGENTS AMPLIFY'.",
+      "qc": "clean — all human-side and agent-side labels render correctly",
+      "license": "© 2026 Frank Riemer, all rights reserved (project asset)"
+    },
+    {
+      "file": "four-loops.webp",
+      "master": "four-loops.png",
+      "role": "infographic-four-loops",
+      "status": "shipped",
+      "aspect": "16:9",
+      "dimensions": "1376x768",
+      "usedIn": ["docs/four-loops.md"],
+      "alt": "Systems diagram of four interlinked loops — Signal-to-Artifact, Room-to-Network, Relationship-to-Contribution, Learning-to-Evolution — compounding around a gravity core.",
+      "promptSummary": "Four interlocking loops of light around a GRAVITY core, each a labeled cycle, compounding inward. Obsidian / midnight-blue / cyan / gold.",
+      "qc": "MINOR GARBLING — the four loop titles and the steps of loops 2-4 render correctly, but Loop 1 (Signal→Artifact) shows a garbled nonsense token 'pubifact' near 'response', and a few center labels ('continue', 'strengthen', 'observe') are duplicated/floating. Shipped with this flag; a regen is tracked as a follow-up.",
+      "license": "© 2026 Frank Riemer, all rights reserved (project asset)"
+    }
+  ]
+}

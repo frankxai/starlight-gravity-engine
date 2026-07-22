@@ -1,0 +1,18 @@
+[
+  {
+    "id": "art_moat",
+    "title": "Local-first memory is the real moat",
+    "kind": "essay",
+    "body": "Full essay lives in the field; published to the founder blog.",
+    "sourceSignals": ["sig_1", "sig_2"],
+    "sipAttested": true,
+    "provenance": {
+      "source": "artifact",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-11T19:00:00.000Z",
+      "dataClass": "public",
+      "approval": "approved",
+      "publishable": true
+    }
+  }
+]

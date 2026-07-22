@@ -1,0 +1,19 @@
+[
+  {
+    "id": "intro_ada_grace",
+    "personAId": "p_ada",
+    "personBId": "p_grace",
+    "rationale": "Both are building consent-first, local-first memory; a warm intro serves each.",
+    "consentA": "approved",
+    "consentB": "approved",
+    "status": "made",
+    "provenance": {
+      "source": "introduction",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-21T19:00:00.000Z",
+      "dataClass": "private_context",
+      "approval": "proposed",
+      "publishable": false
+    }
+  }
+]

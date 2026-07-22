@@ -1,0 +1,44 @@
+[
+  {
+    "id": "p_ada",
+    "displayName": "Ada",
+    "observableContext": ["Building a local-first memory library", "Spoke at the July dinner"],
+    "tags": ["local-first"],
+    "provenance": {
+      "source": "person:p_ada",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-08T19:00:00.000Z",
+      "dataClass": "private_context",
+      "approval": "proposed",
+      "publishable": false
+    }
+  },
+  {
+    "id": "p_grace",
+    "displayName": "Grace",
+    "observableContext": ["Working on consent-first data tooling", "Asked about provenance"],
+    "tags": ["local-first"],
+    "provenance": {
+      "source": "person:p_grace",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-20T19:00:00.000Z",
+      "dataClass": "private_context",
+      "approval": "proposed",
+      "publishable": false
+    }
+  },
+  {
+    "id": "p_kenji",
+    "displayName": "Kenji",
+    "observableContext": ["Runs the Riverside founders cohort", "Invited us to demo"],
+    "tags": ["local-first"],
+    "provenance": {
+      "source": "person:p_kenji",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-14T19:00:00.000Z",
+      "dataClass": "private_context",
+      "approval": "proposed",
+      "publishable": false
+    }
+  }
+]

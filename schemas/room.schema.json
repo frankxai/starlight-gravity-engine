@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://starlightintelligence.org/gravity/schemas/room.schema.json",
+  "title": "Room",
+  "description": "A convening — the reason a set of people gather. Convening is a force of gravity: it turns a network into a field. A room begins as a thesis, not a guest list.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "thesis", "hostId", "provenance"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "thesis": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Why these people, why now. A room without a thesis is a party."
+    },
+    "theme": { "type": "string" },
+    "hostId": { "type": "string", "minLength": 1, "description": "'me' or a person-context id." },
+    "invitees": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "person-context ids. Suggested, never auto-invited."
+    },
+    "scheduledFor": { "type": "string", "format": "date-time" },
+    "status": {
+      "type": "string",
+      "enum": ["proposed", "scheduled", "hosted", "synthesized"],
+      "default": "proposed"
+    },
+    "synthesis": {
+      "type": "string",
+      "description": "What the room produced. Written after, by the human."
+    },
+    "provenance": { "$ref": "#/$defs/provenance" }
+  },
+  "$defs": {
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "capturedBy", "capturedAt", "dataClass"],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "capturedBy": { "type": "string", "minLength": 1 },
+        "capturedAt": { "type": "string", "format": "date-time" },
+        "dataClass": {
+          "type": "string",
+          "enum": [
+            "public",
+            "publishable_with_attribution",
+            "publishable_anonymized",
+            "private_context",
+            "restricted"
+          ]
+        },
+        "approval": {
+          "type": "string",
+          "enum": ["proposed", "approved", "declined"],
+          "default": "proposed"
+        },
+        "publishable": { "type": "boolean", "default": false }
+      }
+    }
+  }
+}

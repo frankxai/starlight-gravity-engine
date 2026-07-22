@@ -1,0 +1,20 @@
+{
+  "name": "@starlight-gravity/core",
+  "version": "0.1.0",
+  "description": "Local-first core for the Starlight Gravity Engine: schemas, gravity scoring, deterministic capture, storage, and SIP attestation.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "test": "node --test \"test/**/*.test.ts\""
+  }
+}

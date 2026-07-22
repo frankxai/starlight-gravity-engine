@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://starlightintelligence.org/gravity/schemas/direction.schema.json",
+  "title": "Direction",
+  "description": "The human's stated direction — the thesis that gives encounters meaning. Gravity has no direction without it. Authored by the human, never inferred by an agent.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "statement", "createdAt", "updatedAt"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "statement": {
+      "type": "string",
+      "minLength": 1,
+      "description": "One or two sentences: what you are building gravity around."
+    },
+    "horizon": {
+      "type": "string",
+      "description": "Free-text time horizon, e.g. '12 months'."
+    },
+    "themes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "The few threads you want encounters to compound into."
+    },
+    "values": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  }
+}

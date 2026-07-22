@@ -1,0 +1,114 @@
+# gravitypack.yaml — the Starlight Gravity Engine, declared.
+#
+# A "gravity pack" is the portable manifest of this vertical: what it is, the
+# forces it models, the loops it runs, and the sovereignty rules it enforces.
+# Any agent or harness can read this file to understand the engine without
+# reading the code.
+
+name: starlight-gravity-engine
+title: Starlight Gravity Engine
+version: 0.1.0
+edition: Field Edition
+license: MIT
+author: Frank Riemer
+homepage: https://github.com/frankxai/starlight-gravity-engine
+
+summary: >-
+  Human and agentic engineering for turning meaningful encounters into shared
+  intelligence, useful artifacts, trusted relationships, and rooms people want
+  to return to.
+
+thesis:
+  human: Human engineering creates gravity.
+  agentic: Agentic engineering makes it compound.
+  mechanism: Gravity = Direction × Signal × Contribution × Convening × Reliability
+
+# The engine composes with the Starlight Intelligence Protocol. Not decorative —
+# every published artifact carries the attestation block (see attest.ts).
+sip:
+  substrate: starlightintelligence.org/protocol
+  version: 1.1.1
+  vertical: starlight-gravity-engine
+  canon: none
+  composes_with:
+    - Starlight-Intelligence-System # sovereign substrate (SIP, memory, identity)
+    - creator-intelligence-system # signal-to-artifact protocol
+    - agentic-creator-os # executable creative workflows
+
+# Three ways in. Value in fifteen minutes at every tier; no cloud required.
+modes:
+  - id: markdown
+    name: Markdown Starter
+    needs: Any capable AI agent + the files in starter-packs/
+    install: none
+  - id: local
+    name: Local Engine
+    needs: Node.js 22+
+    install: clone + run; zero runtime dependencies
+  - id: connected
+    name: Connected Operator
+    needs: Optional adapters (SIS, Supabase, Notion, Calendar, Telegram, n8n, GitHub)
+    install: opt-in per adapter
+
+forces:
+  - id: direction
+    question: Are you moving somewhere worth joining?
+  - id: signal
+    question: Are you capturing what you notice?
+  - id: contribution
+    question: Do you give before you ask?
+  - id: convening
+    question: Do you bring people together?
+  - id: reliability
+    question: Do your promises come true?
+
+loops:
+  signal-to-artifact: [encounter, capture, extract, build, publish, response]
+  room-to-network: [thesis, curate, host, synthesize, continue]
+  relationship-to-contribution: [remember, appreciate, introduce, contribute, fulfil, recalibrate]
+  learning-to-evolution: [observe, evaluate, refine, strengthen]
+
+# The sovereignty spine. Every signal and artifact carries one data class.
+data_classes:
+  - public
+  - publishable_with_attribution
+  - publishable_anonymized
+  - private_context # default
+  - restricted
+
+schemas:
+  dir: schemas/
+  format: JSON Schema draft 2020-12
+  entities: [direction, signal, person-context, commitment, room, introduction, artifact]
+
+cli:
+  bin: starlight-gravity
+  commands: [init, capture, brief, room, follow-through, publish, review, doctor]
+
+agents:
+  dir: agents/
+  roster: [signal-steward, field-editor, commitment-steward, room-curator, introduction-architect]
+
+skills:
+  dir: skills/
+  roster:
+    [
+      gravity-capture,
+      gravity-brief,
+      gravity-publish,
+      gravity-room,
+      gravity-follow-through,
+      gravity-review,
+    ]
+
+# Non-negotiable. Enforced in code (guardrails.ts, privacy.ts, attest.ts) and asserted in tests.
+sovereignty:
+  - Agents never impersonate the human.
+  - Agents never send messages or invitations without approval.
+  - Agents never infer attraction, diagnosis, hidden intent, or relationship value.
+  - Agents never generate private-person rankings.
+  - Store observable context, not speculative psychoanalysis.
+  - Private conversations are non-publishable by default.
+  - Publication requires provenance and explicit publishability.
+  - The human decides access, meaning, invitations, and publication.
+  - Data can be exported and deleted. Local-first is the default.

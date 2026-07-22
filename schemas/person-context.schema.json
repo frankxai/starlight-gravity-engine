@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://starlightintelligence.org/gravity/schemas/person-context.schema.json",
+  "title": "PersonContext",
+  "description": "Observable, consented context about a person. NOT a CRM record, NOT a dossier, NOT a ranking. `additionalProperties` is false by design: fields for attraction, scoring, tiering, diagnosis, relationship-value, or hidden-intent are structurally impossible to add. Store what was said and observed — never what was inferred about someone's interior.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "displayName", "provenance"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "displayName": { "type": "string", "minLength": 1 },
+    "observableContext": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Things they stated or you plainly observed. No inference about interior states."
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "firstMet": {
+      "type": "string",
+      "description": "Where/when you met. A fact, not a characterization."
+    },
+    "lastContact": { "type": "string" },
+    "provenance": { "$ref": "#/$defs/provenance" }
+  },
+  "$defs": {
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "capturedBy", "capturedAt", "dataClass"],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "capturedBy": { "type": "string", "minLength": 1 },
+        "capturedAt": { "type": "string", "format": "date-time" },
+        "dataClass": {
+          "type": "string",
+          "enum": [
+            "public",
+            "publishable_with_attribution",
+            "publishable_anonymized",
+            "private_context",
+            "restricted"
+          ]
+        },
+        "approval": {
+          "type": "string",
+          "enum": ["proposed", "approved", "declined"],
+          "default": "proposed"
+        },
+        "publishable": { "type": "boolean", "default": false }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Privacy or sovereignty concern
+    url: https://github.com/frankxai/starlight-gravity-engine/blob/main/SECURITY.md
+    about: How to report a data-handling, consent, or impersonation concern.

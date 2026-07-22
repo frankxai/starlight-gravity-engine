@@ -1,0 +1,26 @@
+{
+  "name": "@starlight-gravity/cli",
+  "version": "0.1.0",
+  "description": "Cross-platform CLI for the Starlight Gravity Engine.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "starlight-gravity": "./src/bin.ts"
+  },
+  "main": "./src/cli.ts",
+  "exports": {
+    ".": "./src/cli.ts",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "test": "node --test \"test/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@starlight-gravity/core": "workspace:^"
+  }
+}

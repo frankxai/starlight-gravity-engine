@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://starlightintelligence.org/gravity/schemas/commitment.schema.json",
+  "title": "Commitment",
+  "description": "A promise made or received. Reliability — kept promises — is a force of gravity. A commitment names a concrete artifact, not a vague intention. Agents track and remind; only the human marks one fulfilled.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "description", "owner", "artifact", "createdAt", "provenance"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "owner": {
+      "type": "string",
+      "minLength": 1,
+      "description": "'me' or a person-context id — who owes it."
+    },
+    "counterpartyId": { "type": "string", "description": "person-context id it is owed to." },
+    "artifact": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The concrete thing promised — 'the intro deck', not 'follow up'."
+    },
+    "dueDate": { "type": "string", "format": "date-time" },
+    "status": {
+      "type": "string",
+      "enum": ["open", "fulfilled", "released"],
+      "default": "open"
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "provenance": { "$ref": "#/$defs/provenance" }
+  },
+  "$defs": {
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "capturedBy", "capturedAt", "dataClass"],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "capturedBy": { "type": "string", "minLength": 1 },
+        "capturedAt": { "type": "string", "format": "date-time" },
+        "dataClass": {
+          "type": "string",
+          "enum": [
+            "public",
+            "publishable_with_attribution",
+            "publishable_anonymized",
+            "private_context",
+            "restricted"
+          ]
+        },
+        "approval": {
+          "type": "string",
+          "enum": ["proposed", "approved", "declined"],
+          "default": "proposed"
+        },
+        "publishable": { "type": "boolean", "default": false }
+      }
+    }
+  }
+}
