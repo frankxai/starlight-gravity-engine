@@ -1,0 +1,55 @@
+[
+  {
+    "id": "cmt_essay",
+    "description": "Send Ada the draft essay on local-first memory.",
+    "owner": "me",
+    "counterpartyId": "p_ada",
+    "artifact": "draft essay: local-first memory",
+    "dueDate": "2026-07-11T00:00:00.000Z",
+    "status": "fulfilled",
+    "createdAt": "2026-07-08T19:00:00.000Z",
+    "provenance": {
+      "source": "commitment",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-08T19:00:00.000Z",
+      "dataClass": "private_context",
+      "approval": "proposed",
+      "publishable": false
+    }
+  },
+  {
+    "id": "cmt_demo",
+    "description": "Prepare the Riverside cohort demo for Kenji.",
+    "owner": "me",
+    "counterpartyId": "p_kenji",
+    "artifact": "Riverside demo deck",
+    "dueDate": "2026-07-16T00:00:00.000Z",
+    "status": "fulfilled",
+    "createdAt": "2026-07-14T19:00:00.000Z",
+    "provenance": {
+      "source": "commitment",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-14T19:00:00.000Z",
+      "dataClass": "private_context",
+      "approval": "proposed",
+      "publishable": false
+    }
+  },
+  {
+    "id": "cmt_intro_note",
+    "description": "Write the intro rationale for Ada and Grace.",
+    "owner": "me",
+    "artifact": "intro note: Ada × Grace",
+    "dueDate": "2026-07-30T00:00:00.000Z",
+    "status": "open",
+    "createdAt": "2026-07-20T19:00:00.000Z",
+    "provenance": {
+      "source": "commitment",
+      "capturedBy": "human",
+      "capturedAt": "2026-07-20T19:00:00.000Z",
+      "dataClass": "private_context",
+      "approval": "proposed",
+      "publishable": false
+    }
+  }
+]

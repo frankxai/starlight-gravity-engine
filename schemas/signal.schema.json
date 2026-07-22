@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://starlightintelligence.org/gravity/schemas/signal.schema.json",
+  "title": "Signal",
+  "description": "A captured encounter or field note — the raw unit of the Signal-to-Artifact loop. Every signal carries provenance, a data class, and an approval state.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "content", "provenance"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "content": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The observation in one line. Observable, not speculative."
+    },
+    "encounterId": { "type": "string" },
+    "themes": { "type": "array", "items": { "type": "string" } },
+    "strength": {
+      "type": "string",
+      "enum": ["weak", "notable", "strong"],
+      "default": "notable"
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "default": 0.5,
+      "description": "0..1 salience. Heuristic and explainable; never a person-ranking."
+    },
+    "relatedPeople": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "person-context ids observed. References, not dossiers."
+    },
+    "provenance": { "$ref": "#/$defs/provenance" }
+  },
+  "$defs": {
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "capturedBy", "capturedAt", "dataClass"],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "capturedBy": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Human name or agent id. Agents are labelled as agents."
+        },
+        "capturedAt": { "type": "string", "format": "date-time" },
+        "dataClass": {
+          "type": "string",
+          "enum": [
+            "public",
+            "publishable_with_attribution",
+            "publishable_anonymized",
+            "private_context",
+            "restricted"
+          ]
+        },
+        "approval": {
+          "type": "string",
+          "enum": ["proposed", "approved", "declined"],
+          "default": "proposed"
+        },
+        "publishable": { "type": "boolean", "default": false }
+      }
+    }
+  }
+}

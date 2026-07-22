@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://starlightintelligence.org/gravity/schemas/artifact.schema.json",
+  "title": "Artifact",
+  "description": "A useful thing built from signals — the output of the Signal-to-Artifact loop. Publication requires provenance and an explicit publishable + approved state. Private context is non-publishable by default.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "title", "provenance"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "kind": {
+      "type": "string",
+      "enum": ["essay", "note", "thread", "deck", "brief", "other"],
+      "default": "note"
+    },
+    "body": { "type": "string" },
+    "sourceSignals": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "signal ids this artifact was built from. The provenance chain."
+    },
+    "sipAttested": {
+      "type": "boolean",
+      "default": false,
+      "description": "True once a 'Built on SIP' block has been attached."
+    },
+    "provenance": { "$ref": "#/$defs/provenance" }
+  },
+  "$defs": {
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "capturedBy", "capturedAt", "dataClass"],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "capturedBy": { "type": "string", "minLength": 1 },
+        "capturedAt": { "type": "string", "format": "date-time" },
+        "dataClass": {
+          "type": "string",
+          "enum": [
+            "public",
+            "publishable_with_attribution",
+            "publishable_anonymized",
+            "private_context",
+            "restricted"
+          ]
+        },
+        "approval": {
+          "type": "string",
+          "enum": ["proposed", "approved", "declined"],
+          "default": "proposed"
+        },
+        "publishable": { "type": "boolean", "default": false }
+      }
+    }
+  }
+}

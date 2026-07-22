@@ -1,0 +1,9 @@
+# Normalize all text to LF in the repo — the CLI entry (bin.ts) carries a
+# shebang and must stay LF so it runs on Linux/macOS CI.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary

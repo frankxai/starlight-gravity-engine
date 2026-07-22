@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://starlightintelligence.org/gravity/schemas/introduction.schema.json",
+  "title": "Introduction",
+  "description": "Connecting two people so both are served. A generous introduction compounds gravity for everyone. Double consent is structural: an introduction cannot reach 'made' until both parties have consented.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "personAId", "personBId", "rationale", "provenance"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "personAId": { "type": "string", "minLength": 1, "description": "person-context id." },
+    "personBId": { "type": "string", "minLength": 1, "description": "person-context id." },
+    "rationale": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Why this serves BOTH people. Not why it serves you."
+    },
+    "consentA": {
+      "type": "string",
+      "enum": ["proposed", "approved", "declined"],
+      "default": "proposed"
+    },
+    "consentB": {
+      "type": "string",
+      "enum": ["proposed", "approved", "declined"],
+      "default": "proposed"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["proposed", "consented", "made", "declined"],
+      "default": "proposed",
+      "description": "May only reach 'made' once both consents are 'approved'. Enforced by the engine."
+    },
+    "provenance": { "$ref": "#/$defs/provenance" }
+  },
+  "$defs": {
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "capturedBy", "capturedAt", "dataClass"],
+      "properties": {
+        "source": { "type": "string", "minLength": 1 },
+        "capturedBy": { "type": "string", "minLength": 1 },
+        "capturedAt": { "type": "string", "format": "date-time" },
+        "dataClass": {
+          "type": "string",
+          "enum": [
+            "public",
+            "publishable_with_attribution",
+            "publishable_anonymized",
+            "private_context",
+            "restricted"
+          ]
+        },
+        "approval": {
+          "type": "string",
+          "enum": ["proposed", "approved", "declined"],
+          "default": "proposed"
+        },
+        "publishable": { "type": "boolean", "default": false }
+      }
+    }
+  }
+}

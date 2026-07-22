@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example
+coverage/
+# Local-first user data — never commit a real field.
+# Exception: the curated, fully-synthetic example fields under examples/.
+.gravity/
+!examples/**/.gravity/
+!examples/**/.gravity/**
+reviews.json
+!examples/**/reviews.json
+tmp-*.mjs

@@ -1,0 +1,45 @@
+{
+  "$comment": "Provenance for every raster asset. Status 'pending' means the slot is defined but the image is not yet generated. Fill tool/model/generatedAt/sourcePrompt when an asset lands.",
+  "assets": [
+    {
+      "file": "hero.webp",
+      "role": "readme-hero",
+      "status": "pending",
+      "alt": "A single human standing within a luminous constellation of ideas, artifacts, conversations, and small circles of people — the Starlight Gravity Engine rendered as a field of light in obsidian, midnight blue, aurora cyan, and gold.",
+      "tool": null,
+      "model": null,
+      "generatedAt": null,
+      "license": "© 2026 Frank Riemer, all rights reserved (project asset)"
+    },
+    {
+      "file": "five-forces.webp",
+      "role": "infographic-five-forces",
+      "status": "pending",
+      "alt": "Five luminous forces — Direction, Signal, Contribution, Convening, Reliability — orbiting a central point of light, multiplied into a single gravitational field.",
+      "tool": null,
+      "model": null,
+      "generatedAt": null,
+      "license": "© 2026 Frank Riemer, all rights reserved (project asset)"
+    },
+    {
+      "file": "human-agent.webp",
+      "role": "infographic-human-agent",
+      "status": "pending",
+      "alt": "Two intertwined systems of light — a human hand and an agentic lattice — where the human sparks gravity and the agent's lattice makes it compound.",
+      "tool": null,
+      "model": null,
+      "generatedAt": null,
+      "license": "© 2026 Frank Riemer, all rights reserved (project asset)"
+    },
+    {
+      "file": "four-loops.webp",
+      "role": "infographic-four-loops",
+      "status": "pending",
+      "alt": "Four interlocking loops of light — Signal→Artifact, Room→Network, Relationship→Contribution, Learning→Evolution — feeding one another in a compounding spiral.",
+      "tool": null,
+      "model": null,
+      "generatedAt": null,
+      "license": "© 2026 Frank Riemer, all rights reserved (project asset)"
+    }
+  ]
+}

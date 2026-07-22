@@ -1,0 +1,33 @@
+{
+  "name": "starlight-gravity-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Human and agentic engineering for turning meaningful encounters into shared intelligence, useful artifacts, trusted relationships, and rooms people want to return to.",
+  "license": "MIT",
+  "author": "Frank Riemer",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@10.32.1",
+  "bin": {
+    "starlight-gravity": "packages/cli/src/bin.ts"
+  },
+  "scripts": {
+    "link:dev": "node scripts/link-workspace.mjs",
+    "build": "tsc -b",
+    "typecheck": "tsc -b --verbose",
+    "lint": "prettier --check \"**/*.{ts,json,md,yaml,yml}\"",
+    "format": "prettier --write \"**/*.{ts,json,md,yaml,yml}\"",
+    "pretest": "node scripts/link-workspace.mjs",
+    "test": "node --test \"packages/*/test/**/*.test.ts\"",
+    "schemas:validate": "node scripts/validate-schemas.mjs",
+    "gravity": "node packages/cli/src/bin.ts",
+    "doctor": "node packages/cli/src/bin.ts doctor",
+    "verify": "pnpm run schemas:validate && pnpm run test && pnpm run typecheck && pnpm run lint && pnpm run build"
+  },
+  "devDependencies": {
+    "prettier": "3.4.2",
+    "typescript": "5.7.3"
+  }
+}
